@@ -11,7 +11,7 @@ public class LabFour {
 		
 		int i = 1;
 		while (cont == 'y') {// So long as the user chooses to run this again it will loop.
-			System.out.println("Enter your Number: ");
+			System.out.print("Enter your Number: ");
 			userNum = scnr.nextInt();
 			System.out.printf("%-12s | %-10s | %-10s\n", "User Number", "Squared", "Cubed");// Top of the chart
 
@@ -21,17 +21,20 @@ public class LabFour {
 			}
 			i = 1;// Resets i so that the user can enter a new number
 			System.out.println(" ");// Space for Visual esthetics
-			System.out.println("Would you like to try another number? (Y/N)");// Option to do another
+			System.out.print("Would you like to try another number? (Y/N)");// Option to do another
 
 			cont = scnr.next().charAt(0); // Gets first character so that the user can type in yes or no
 			cont = Character.toLowerCase(cont); // Changes character to lower case so capitalization doesn't matter
-
+			System.out.println("");
 		}
-		System.out.println("Would you like to see a multiplication table? (y/n)");
-
+		System.out.print("Would you like to see a multiplication table? (y/n)");
+		
 		viewTable = scnr.next().charAt(0); // Gets first character so that the user can type in yes or no
 		viewTable = Character.toLowerCase(viewTable); // Changes character to lower case so capitalization doesn't matter
 
+		System.out.println("");
+		System.out.println("");
+		
 		if (viewTable == 'y') {
 
 			System.out.printf("%-5s | %-5s | %-5s | %-5s | %-5s | %-5s | %-5s | %-5s | %-5s | %-5s | %-5s\n", " ", "1",
@@ -46,12 +49,19 @@ public class LabFour {
 						(sideNum * 6), (sideNum * 7), (sideNum * 8), (sideNum * 9), (sideNum * 10));
 				sideNum = sideNum + 1;
 			}
-			System.out.println("Would you like to see my answer to the CodingBat? (y/n)");
+			System.out.println("");
+			System.out.println("");
+			System.out.println("");
+			
+			System.out.print("Would you like to see my answer to the CodingBat? (y/n)");
 
 			codeBat = scnr.next().charAt(0); // Gets first character so that the user can type in yes or no
 			codeBat = Character.toLowerCase(codeBat); // Changes character to lower case so capitalization doesn't matter
-
+			System.out.println("");
+			
 			if (codeBat == 'y') {
+				System.out.println("");
+				System.out.println("");
 				System.out.println("public boolean nearHundred(int n) {");
 				System.out.println("	 int value1 = 100-n;");
 				System.out.println("	 int value2 = 200-n;");
